@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='PeopleOnGitHubApp'>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People On GitHub</title>
+  <link rel="stylesheet" type="text/css"  href="css/bootstrap.css"> 
+  <link rel="stylesheet" type="text/css" href="css/main.css"> 
+</head>
+<body  ng-controller="homeController">
+
+<div>{{status}}</div>
+<div class="container-fluid main-div">
+  <div class="row">
+    <div class="col-sm-12 title-div">
+           People On GitHub     
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 left-div">
+      <div class="row user" ng-repeat="user in users | orderBy : user.id : isActive" >
+        <div class="col-sm-3" >
+          <img src="{{user.avatar_url}}" />
+        </div>
+        <div class="col-sm-6">
+           <span>{{user.login}}</span> </br>
+           <span class="color-red">{{user.id}}</span> 
+        </div>
+        <div class="col-sm-3 view">
+          <a class="btn btn-primary" href="{{user.html_url}}" target="_blank">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 buttons">
+        <button type="button" class="btn btn-primary" ng-click="toggleActive()">Sort by GitHub Id ({{isActive ? 'Active' : 'Inactive'}})</button>
+        <button type="button" class="btn btn-primary" ng-click="toggleFilter()">Filter out even ID's ({{isActive ? 'Active' : 'Inactive'}})</button>
+    </div>
+  </div>
+</div>
+    <!-- Tab panes
+    <div class="tab-content">
+      <div class="tab-pane fade active in" id="active">
+          <div class="row" ng-repeat="job in activeJobs">
+              <div class="col-md-5">
+                <p class="margin-top-15">{{job.title}},</p>
+                <p>{{job.desc}}</p>
+              </div>
+              <div class="col-md-7">
+                <div class="row margin-top-10">
+                  <div class="col-md-3 text-center"><i class="fa {{job.icon}} fa-3x"></i></br><span>{{job.type}}</span></div>
+                  <div class="col-md-2 text-center"><div class="circle">{{job.quotes}}</div><span>Quotes</span></div>
+                  <div class="col-md-2 text-center"><i class="fa fa-comment-o fa-3x"></i></br><span>Messages</span></div>
+                  <div class="col-md-3 text-center"><i class="fa fa-money fa-3x"></i><span class="rating">{{job.rate}}</span><button class="btn btn-default btn-best-quote">Best Quote</button></div>
+                 
+                </div>
+              </div>
+          </div>
+      </div>
+    
+    </div>
+  </div>
+</div> -->
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.js"></script>
+<script src="lib/angular.js"></script>
+<script src="app.js"></script> 
+
+<script>
+    
+</script> 
+</body>
+</html>

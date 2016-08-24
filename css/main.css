@@ -1,0 +1,28 @@
+.main-div{
+  width: 70%;
+  margin: 20px auto;
+}
+.title-div{
+  margin-top: 2%;
+  font-size: 4em;
+  border: 2px solid #999;
+}
+
+.left-div{
+  border-left: 2px solid #999;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+.user{
+  padding: 10px 0;
+}
+.user:nth-child(odd){
+  background: #eee;
+}
+.user img{width: 70%; border-radius:40px; }
+.user span{    font-size: 1.7em;}
+.user .color-red{color: red;}
+.user .view{line-height: 62px;font-size: 1.5em;}
+
+.buttons{padding-top:20px; }
+.buttons button{width:98%;margin: 10px;font-size: 1.5em;}
